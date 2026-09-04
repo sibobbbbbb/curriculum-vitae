@@ -1,28 +1,131 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[10pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
-\geometry{a4paper, margin=1in}
+\geometry{a4paper, margin=0.75in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{mathptmx} % Menggunakan font mirip Times New Roman seperti di PDF Anda
 
-\title{\bfseries Curriculum Vitae}
-\author{Your Name}
-\date{}
+% Setting warna untuk link
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+% Format untuk judul tiap section (EDUCATION, EXPERIENCES, dst)
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
 
 \begin{document}
+\thispagestyle{empty} % Menghilangkan nomor halaman
 
-\maketitle
+% --- HEADER ---
+\begin{center}
+    {\LARGE \textbf{Farhan Raditya Aji}} \\[4pt]
+    \href{mailto:raditya0814@gmail.com}{\underline{raditya0814@gmail.com}} | 
+    \href{https://github.com/sibobbbbbb}{\underline{https://github.com/sibobbbbbb}} | 
+    \href{https://www.linkedin.com/in/farhan-raditya-aji}{\underline{www.linkedin.com/in/farhan-raditya-aji}} | 
+    \href{https://www.farhanraditya.com/}{\underline{https://www.farhanraditya.com/}}
+\end{center}
 
-\section*{Contact Information}
-\begin{itemize}
-    \item Email: your.email@example.com
-    \item Phone: +62 812 3456 7890
+\vspace{4pt}
+\noindent
+Informatics Engineering student at Institut Teknologi Bandung (ITB), graduating August 2026, specializing in Software Engineering. Experienced in developing scalable backend systems and full-stack applications using Java (Spring Boot), Go, and Node.js. Proven track record in delivering enterprise solutions through professional internship and complex academic projects. Passionate about cloud infrastructure, microservices, and blockchain technology.
+
+% --- EDUCATION ---
+\section*{EDUCATION}
+\noindent
+\textbf{Institut Teknologi Bandung | Informatics Engineering} \hfill \textbf{July 2022 -- August 2026}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item GPA 3.36
 \end{itemize}
 
-\section*{Professional Experience}
-\textbf{Software Engineer} \hfill \textit{2022 - Present}\\
-Company Name, City
-\begin{itemize}
-    \item Developed and maintained web applications.
-    \item Implemented CI/CD pipelines using GitHub Actions.
+% --- EXPERIENCES ---
+\section*{EXPERIENCES}
+\noindent
+\textbf{Software Engineer Intern | PT. Akhdani Reka Solusi} \hfill \textbf{June 2025 -- September 2025}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Collaborated with a fellow intern to develop the Project Management Module for AHER (Akhdani HR), giving management unified visibility over project tracking and task ownership across all internal operations for the first time.
+    \item Engineered a scalable backend using Java Spring Boot, implementing RESTful APIs and optimizing database interactions with PostgreSQL and LeafDB.
+    \item Created complex database schemas to handle Work Breakdown Structures (WBS), task hierarchies, and master data management.
+    \item Partnered with the UI/UX team to translate design specifications into production-ready Thymeleaf/Bootstrap interfaces, delivering screens that passed stakeholder acceptance testing within the project timeline.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{IT Associates | Google Developer Groups on Campus ITB} \hfill \textbf{April 2025 -- October 2025}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Co-architected and delivered the RESTful API backend for GDGoC ITB's LMS alongside one engineer, enabling core platform operations including user management, course delivery, and event handling.
+    \item Designed and built a task submission system, including a Command Line Interface (CLI) tool published globally via npm, to facilitate efficient and standardized problem set submissions for users.
+    \item Served as the primary backend liaison to the frontend team, defining API contracts and resolving integration blockers to maintain consistent data flow across the platform.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{Frontend Engineer | Ganesha Interactive Media (GIM) ITB} \hfill \textbf{Feb 2025 -- August 2025}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Delivered GIM ITB's ``Our Works'' archive from zero, replacing manually maintained static pages with a fully dynamic, API-driven content system across four categories (Game, Visual Art, Audio Art, Story).
+    \item Implemented dynamic tag-based content fetching to populate work archives across all content categories, replacing static data with API-driven rendering.
+    \item Refactored Visual Art and Audio Art into a shared WorkCard component, eliminating duplicated logic across two sections and ensuring visual consistency without parallel maintenance overhead.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{Software Engineer | Bandung Tennis Enthusiast (BEAST)} \hfill \textbf{January 2025 -- May 2025}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Built BEAST's first digital platform, replacing manual spreadsheet membership tracking, offline event coordination, and trainer notes with a unified web system serving the active sports community.
+    \item Implemented secure user authentication and authorization using JWT and Google OAuth 2.0.
+    \item Designed a normalized PostgreSQL schema with Prisma ORM and deployed the full stack with Docker, establishing CI/CD pipelines that removed manual deployment steps and enabled continuous delivery.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{Staff of Career Development Division | Himpunan Mahasiswa Informatika (HMIF) ITB} \hfill \textbf{August 2024 -- July 2025}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Designed and ran career mentoring programs connecting ITB Informatics students with industry alumni, bridging the gap between academic study and professional expectations.
+    \item Coordinated with alumni speakers to deliver career development insights for students.
+    \item Compiled and produced an internship testimonial booklet from senior students' experiences, creating a reusable reference resource for incoming cohorts preparing for their first industry placements.
+\end{itemize}
+
+% --- PROJECT ---
+\section*{PROJECT}
+\noindent
+\textbf{Academic Chatbot ITB - RAG-Based System} \hfill \textbf{Oct 2025 -- July 2026}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Architected the application layer of ITB's Academic Chatbot using FastAPI and React with SSE streaming, integrating a microservices backend against a RAG-based Core AI Service through defined REST API contracts.
+    \item Designed a distributed corpus synchronization mechanism between PostgreSQL and ChromaDB, preventing the system from serving answers grounded in superseded academic regulations after any document mutation.
+    \item Built an answer provenance tracking module using contextual snapshots, ensuring every response can be independently verified against the regulation version that was active at query time, creating a critical guarantee for an institutional decision-support system.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{RYOKAN - AI Risk Accountability System} \hfill \textbf{May 2026}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Built an AI-powered pre-trade accountability system that enforces structured thesis evaluation against live Binance market data before any risk calculation is permitted, eliminating emotionally-driven trade entries.
+    \item Designed a hard-gating mechanism using OpenRouter that blocks position sizing entirely until the trade thesis passes structural validation, making undisciplined entries architecturally impossible.
+    \item Developed a 3-tier risk matrix engine for real-time position sizing, liquidation, and R:R analysis, deployed on Vercel.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{Direblo} \hfill \textbf{December 2025}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item Engineered a decentralized diploma verification registry on Ethereum Sepolia, making academic credentials tamper-proof and independently verifiable without relying on any central authority or institutional intermediary.
+    \item Built a full-stack dApp with Next.js and IPFS, applying hybrid AES-256/SHA-256 cryptography to keep diploma data private in transit while preserving on-chain integrity guarantees.
+\end{itemize}
+
+% --- ADDITIONAL INFORMATION ---
+\section*{ADDITIONAL INFORMATION}
+\begin{itemize}[leftmargin=0.25in, topsep=2pt, itemsep=0pt, parsep=2pt]
+    \item \textbf{Programming Languages:} Python, C++, C, Go, Java, JavaScript, TypeScript, Dart, Kotlin.
+    \item \textbf{Frameworks \& Libraries:} Spring Boot, Node.js, Express.js, Hono, React.js, Next.js, Vue.js, Flutter, Tailwind CSS, Bootstrap, Hardhat.
+    \item \textbf{Databases \& Infrastructure:} PostgreSQL, MongoDB, Docker, Nginx.
+    \item \textbf{Tools:} Git (Github/Gitlab), DBeaver, Vercel, Figma, Postman.
+    \item \textbf{Languages:} English, Indonesia.
 \end{itemize}
 
 \end{document}
