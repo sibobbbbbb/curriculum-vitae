@@ -1,0 +1,21 @@
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.toc
+*.synctex.gz
+
+# Optional: Ignore the generated PDF if you don't want it in the repo
+# (Since GitHub Actions builds it and the script copies it)
+# cv/cv.pdf

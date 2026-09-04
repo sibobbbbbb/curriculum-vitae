@@ -15,4 +15,3 @@ echo.
 echo =======================================
 echo Done! CV has been updated for your website.
 echo =======================================
-pause
