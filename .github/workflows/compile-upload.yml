@@ -24,9 +24,11 @@ jobs:
         run: curl https://rclone.org/install.sh | sudo bash
 
       - name: Setup rclone config
+        env:
+          RCLONE_CONFIG_DATA: ${{ secrets.RCLONE_CONFIG }}
         run: |
           mkdir -p ~/.config/rclone
-          echo "${{ secrets.RCLONE_CONFIG }}" > ~/.config/rclone/rclone.conf
+          echo "$RCLONE_CONFIG_DATA" > ~/.config/rclone/rclone.conf
 
       - name: Upload PDF to Google Drive
         run: |
