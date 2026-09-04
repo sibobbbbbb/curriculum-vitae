@@ -32,4 +32,4 @@ jobs:
 
       - name: Upload PDF to Google Drive
         run: |
-          rclone copy cv/cv.pdf "gdrive:" --drive-root-folder-id "${{ secrets.GDRIVE_FOLDER_ID }}"
+          rclone copyto cv/cv.pdf "gdrive:CV-Farhan-Raditya-Aji.pdf" --drive-root-folder-id "${{ secrets.GDRIVE_FOLDER_ID }}"
