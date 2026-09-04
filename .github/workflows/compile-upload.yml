@@ -1,0 +1,33 @@
+name: Compile CV and Upload to Drive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cv/**.tex'
+  workflow_dispatch: # Memungkinkan trigger manual
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+          working_directory: cv/
+
+      - name: Install rclone
+        run: curl https://rclone.org/install.sh | sudo bash
+
+      - name: Setup rclone config
+        run: |
+          mkdir -p ~/.config/rclone
+          echo "${{ secrets.RCLONE_CONFIG }}" > ~/.config/rclone/rclone.conf
+
+      - name: Upload PDF to Google Drive
+        run: |
+          rclone copy cv/cv.pdf "gdrive:" --drive-root-folder-id "${{ secrets.GDRIVE_FOLDER_ID }}"
